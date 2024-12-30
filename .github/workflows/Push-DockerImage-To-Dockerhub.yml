@@ -3,6 +3,11 @@ name: Publish-Docker-image
   push:
     branches:
       - main
+  pull_request:
+    types: 
+      - opened 
+      - closed 
+      - reopened
 jobs:
   push_to_registry:
     name: Push Docker image to Docker Hub
